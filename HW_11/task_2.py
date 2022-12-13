@@ -5,7 +5,7 @@
 """
 
 class TemperatureInterface:
-
+    
     def __init__(self, temp) -> None:
         self.C = temp
         self.K = temp
