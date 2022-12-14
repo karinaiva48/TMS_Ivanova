@@ -39,7 +39,7 @@ while True:
         raise InputOperatorError ('Вы ввели неверный оператор!')
     if operator == '+':
         print (num_1 + num_2)
-    elif noperator == '-':
+    elif operator == '-':
         print (num_1 - num_2)
     elif operator == '/':
         print (round(num_1 / num_2), 2)
