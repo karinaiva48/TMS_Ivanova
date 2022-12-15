@@ -8,7 +8,7 @@ for el in itr:
 1 4 9 16 25 """
 
 class MySquareIterator:
-    def __init__(self, lst:list):
+    def __init__(self, lst):
         self.lst = lst
         self.start = 0
 
@@ -25,7 +25,7 @@ class MySquareIterator:
         return self
 
 
-lst = [2, 2, 3, 4, 5]
+lst = [1, 2, 3, 4, 5]
 itr = MySquareIterator(lst)
 for el in itr:
     print(el)
