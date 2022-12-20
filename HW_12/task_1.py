@@ -37,15 +37,15 @@ while True:
         raise InputNumberError('Введеные символов не являются числами!')
     if operator not in ('+', '-', '*', '/', '**'):
         raise InputOperatorError ('Вы ввели неверный оператор!')
-    if new_expression[1] == '+':
+    if operator == '+':
         print (num_1 + num_2)
-    elif new_expression[1] == '-':
+    elif operator == '-':
         print (num_1 - num_2)
-    elif new_expression[1] == '/':
+    elif operator == '/':
         print (round(num_1 / num_2), 2)
-    elif new_expression[1] == '*':
+    elif operator == '*':
         print (num_1 * num_2)
-    elif new_expression[1] == '**':
+    elif operator == '**':
         print (num_1 ** num_2)
     else:
         raise InputOperatorError('Не известный оператор!')
