@@ -11,7 +11,7 @@ Amelia
 Adrienne
 """
 
-def gen(path:str, letter:str):
+def gen_func(path:str, letter:str):
     letter = letter.upper()  
     with open(path, mode='r') as file:
         for line in file:
@@ -21,5 +21,5 @@ def gen(path:str, letter:str):
 path = ('unsorted_names.txt')
 letter = input('Введите букву: ')              
 
-for i in gen(path, letter):
-    print(i)
+for i in gen_func(path, letter):
+    print(i, end='')
