@@ -38,14 +38,14 @@ class Validator():
 
     @staticmethod
     def validate_login(login: str) -> bool:
-        if len(login) >= 6:
+        if len(login) > 6:
             return True
         else:
             raise InvalidLogin
     
     @staticmethod
     def validate_password(password: str) -> bool:
-        if (len(password) >=8 and 
+        if (len(password) > 8 and 
             len([x for x in password if x in string.ascii_uppercase]) > 0 and
             len([x for x in password if x in string.ascii_lowercase]) > 0 and
             len([x for x in password if x in string.punctuation]) > 0):

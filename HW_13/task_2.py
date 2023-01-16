@@ -8,22 +8,21 @@ for el in itr:
 1 4 9 16 25 """
 
 class MySquareIterator:
-    def __init__(self, lst):
-        self.lst = lst
-        self.start = 0
-
-    def __next__(self):
-        try:
-            result = self.lst[self.start]
-        except IndexError:
-            raise StopIteration
-        else:
-            self.start += 1
-        return result ** 2
+    def __init__(self, iterable) -> None:
+        self.iter = iterable
+        self.index = 0
 
     def __iter__(self):
         return self
 
+    def __next__(self):
+        try:
+            result = self.iter[self.index]
+        except IndexError:
+            raise StopIteration
+        else:
+            self.index += 1
+        return result ** 2
 
 lst = [1, 2, 3, 4, 5]
 itr = MySquareIterator(lst)

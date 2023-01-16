@@ -30,13 +30,13 @@ class Queue():
             try:
                 if isinstance(i, int):
                     '''проверка условия №1: число делится на 8, состоит из не более 4 символов'''
-                    if i % 8 == 0 and len(str(i)) <= 4:
+                    if not i % 8 and len(str(i)) <= 4:
                         self.queue.append(i)
                     else:
                         raise InvalidInt
                 elif isinstance(i, float):
                     '''проверка условия №2: у числа с запятой не более 3 символов после запятой'''
-                    if round(i, 2) == i:
+                    if round(i, 3) == i:
                         self.queue.append(i)
                     else:
                         raise InvalidFloat
