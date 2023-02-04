@@ -26,15 +26,6 @@ def register():
     if request.method == 'POST':
         src = dict(request.form)
         try:
-            username, password, email = request.form['username'], request.form['password'], request.form['email']
-#       except KeyError as e:
-#           return 'Данные не были введены'
-# validator_1 = Validator(username, password, email)
-#  try:
-# if validator_1.validation():
-#  abort(404)
-# except Validation:
-# abort(405)
 
 # @app1.errorhandler(404) 
 # def valid_accept(error):
