@@ -21,17 +21,29 @@ def get_qoute():
     return quotes
 
 
-@app1.route('/register', methods=['GET', 'POST'])
+
+@app1.route('/register', methods=['POST', 'GET'])
 def register():
-    if request.method == 'POST':
-        src = dict(request.form)
+    if request.method == 'POST':  
+        src = dict(request.form)  
         try:
+            username, password, email = request.form['username'], request.form['password'], request.form['email']
+        except KeyError as e:
+            return f'Поле {e} не было передано'
+        validator_1 = Validator(username, password, email)  
+        try:
+            if validator_1.validation():  
+                abort(405)
+        except Validation:  
+            abort(406) 
+    return render_template('register.html')
 
-# @app1.errorhandler(404) 
-# def valid_accept(error):
-# return 'Регистрация прошла успешно'
+
+@app1.errorhandler(405)
+def valid_accept(error):
+    return  'Вы успешно зарегистрированы'
 
 
-# @app1.errorhandler(405)
-# def valid_error(error):
-# return 'Ошибка регистрации'
+@app1.errorhandler(406)
+def valid_error(error):
+    return 'Ошибка регистрации'

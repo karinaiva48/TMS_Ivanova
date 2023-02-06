@@ -32,7 +32,7 @@ class Validator:
             raise InputPassword
 
     def validate_email(self):
-        if re.match(r'^[\w.-]+@[\w.-]+\.(\S{2}$)', self.email):
+        if re.match(r'^[\w.-]+@[\w.-]+\.[a-z]{2,3}', self.email):
             return True
         else:
             raise InputEmail
@@ -48,3 +48,5 @@ class Validator:
             raise Validation
         except InputPassword:
             raise Validation
+        return True
+
