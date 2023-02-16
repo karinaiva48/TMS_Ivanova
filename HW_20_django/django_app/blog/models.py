@@ -23,6 +23,7 @@ class Post(models.Model):
     tittle = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
         return f'Post: {self.tittle}, category: {self.category}'

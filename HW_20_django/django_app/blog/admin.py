@@ -9,7 +9,7 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class CategoryAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title', 'user', 'category', 'created_date')
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
