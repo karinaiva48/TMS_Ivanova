@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1> What did Kanye say? </h1>
+ {% block content %}
+ {% for src in quotes %}
+   <h3>{{src}}</h3>
+ {% endfor %}
+ {% endblock %}
+</body>
+</html>
