@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+</head>
+
+<body id="welcome">
+    <aside class="left-sidebar">
+        <div class="logo">
+        </div>
+        <nav class="left-nav">
+            <ul id="nav">
+                <li class="current"><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'skills' %}">Мои skills</a></li>
+                <li><a href="{% url 'education' %}">Образование</a></li>
+                <li><a href="{% url 'contact' %}">Контактные данные</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div id="main-wrapper">
+        <div class="main-content">
+            <section id="welcome">
+                <div class="content-header">
+                    <h2>{{ title }}</h2>
+                </div>
+                <div class="welcome">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </section>
+        </body>
+
+    </html>
