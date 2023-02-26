@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta chatset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CV</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body>
+  <div class="cv">
+    <section>
+      <h1>Karina Ivanova</h1>
+      <h2>Hello, I'm begginer python-developer! You can know more about me!</h2>
+
+      <div class="urls">
+        <div class="url">
+          <a href="{% url 'skills' %}">My skills</a>
+        </div>
+      </div>
+
+      <div class="urls">
+        <div class="url">
+          <a href="{% url 'education' %}">My education</a>
+        </div>
+      </div>
+
+          <div class="urls">
+            <div class="url">
+          <a href="{% url 'contact' %}">My contacts</a>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</htnl>
