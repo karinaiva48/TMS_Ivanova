@@ -1,34 +1,36 @@
+{% load static %}
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>{{ title }}</title>
+  <meta chatset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CV</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 </head>
+<body>
+  <div class="cv">
+    <section>
+      <h1>Karina Ivanova</h1>
+      <h2>Hello, I'm begginer python-developer! You can know more about me!</h2>
 
-<body id="welcome">
-    <aside class="left-sidebar">
-        <div class="logo">
+      <div class="urls">
+        <div class="url">
+          <a href="{% url 'skills' %}">My skills</a>
         </div>
-        <nav class="left-nav">
-            <ul id="nav">
-                <li class="current"><a href="{% url 'home' %}">Главная</a></li>
-                <li><a href="{% url 'skills' %}">Мои skills</a></li>
-                <li><a href="{% url 'education' %}">Образование</a></li>
-                <li><a href="{% url 'contact' %}">Контактные данные</a></li>
-            </ul>
-        </nav>
-    </aside>
-    <div id="main-wrapper">
-        <div class="main-content">
-            <section id="welcome">
-                <div class="content-header">
-                    <h2>{{ title }}</h2>
-                </div>
-                <div class="welcome">
-                    {% block content %}
-                    {% endblock %}
-                </div>
-            </section>
-        </body>
+      </div>
 
-    </html>
+      <div class="urls">
+        <div class="url">
+          <a href="{% url 'education' %}">My education</a>
+        </div>
+      </div>
+
+          <div class="urls">
+            <div class="url">
+          <a href="{% url 'contact' %}">My contacts</a>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</htnl>

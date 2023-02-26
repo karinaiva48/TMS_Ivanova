@@ -1,0 +1,51 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
+* {
+  color: #333333;
+}
+
+h1 {
+  color: #2f80ed;
+  margin-bottom: 0.25em;
+}
+
+h2 {
+  color: #333333;
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+h3 {
+  color: #1d3657;
+}
+
+a {
+  color: #2f80ed;
+}
+
+.contacts {
+  margin-bottom: 2em;
+}
+
+.contact {
+  display: flex;
+  
+}
+.contact__type {
+  min-width: 90px;
+}
+
+table  {
+  border-collapse:collapse
+}
+td, th {
+  border:1px solid #000000;
+  padding:8px;
+}
+
+  
+  
+  /*# sourceMappingURL=main.css.map */
