@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" href="{% static 'gamestore/css/style.css' %}">
+
+    <title>shop</title>
+</head>
+
+<body>
+<div class="backgrounds">
+    <div class="white"></div>
+    <div class="red active"></div>
+    <div class="pink"></div>
+    <div class="purple"></div>
+    <div class="green"></div>
+</div>
+<div class="wrap_total">
+    <div class="wrap">
+        <div class="mainpage-catalog">
+            <div class="left-menu">
+
+                <div class="left-menu-name"><a href="{% url 'index' %}">Category</a></div>
+                <ul class="left-menu-section">
+                    {% for cat in category %}
+                    <li><a href="{{ cat.get_absolute_url }}">{{ cat.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            {% block sortmenu %}
+            {% endblock %}
+
+            <div class="tabs-content active tab-1">
+                {% block content %}
+                {% endblock %}
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>
