@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #dfc94f;
+    color: rgba(0, 0, 0, 0.719);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #dfc94f;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #5755558a;
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Registration</h3>
+
+<div class="container">
+  <form method="post">
+    <label for="fname">Username (должен состоять от 6 до 10 символов английского алфавит и содержать хотя бы одну цифру 0-9)</label>
+    <input type="text" id="fname" name="username" placeholder="Your username">
+
+    <label for="lname">Password (должен состоять не менее из 8 символов, буквы в верхнем и нижнем регистре, один пециальный символ)</label>
+    <input type="text" id="lname" name="password" placeholder="Your password">
+
+    <label for="subject">Email</label>
+    <textarea id="subject" name="email" placeholder="Write email" style="height:50px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
