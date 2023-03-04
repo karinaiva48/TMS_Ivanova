@@ -1,0 +1,41 @@
+
+body {
+    font-family: 'Lato', arial, sans-serif;
+    color: #1f2225;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1
+  {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #192020;
+  }
+  h2
+  {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #50c8c9;
+  }
+  h3 
+  {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #e00000;
+  }
+  h4
+  {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #334141;
+  }
+
+  
+  a {
+    color: #273333;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+  }

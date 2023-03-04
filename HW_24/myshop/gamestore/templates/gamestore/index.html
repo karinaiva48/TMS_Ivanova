@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+{% block leftmenu %}
+{% endblock %}
+{% block sortmenu %}
+<head>
+<link rel="stylesheet" href="{% static 'gamestore/css/style.css' %}">
+<title>main</title>
+</head>
+
+<div class="tabs">
+    <div class="tabs-btns">
+        <div class="tabs-btn" data-tab=".tab-1"><a href="?sort=name">Name (A-Y)</a></div>
+        <div class="tabs-btn" data-tab=".tab-1"><a href="?sort=-name">Name (Y-A)</a></div>
+        <br>
+        <div class="tabs-btn" data-tab=".tab-1"><a href="?sort=price">Price (less)</a></div>
+        <div class="tabs-btn" data-tab=".tab-1"><a href="?sort=-price">Price (more)</a></div>
+        <br>
+    </div>
+</body>
+    {% endblock %}
+    {% block content %}
+
+    {% for game in games %}
+    <div class="tab-items">
+        <a class="game-block" href="{{ game.get_absolute_url }}">
+        <img width="180" height="240" src="{{ game.game_image.url }}">
+    </div>
+    <div class="game-block-name">{{ game.name }}</div>
+        <h4>{{ game.release_date|date:"Y" }}, {{ game.category }}</h4> </a>
+        <h3>{{ game.price }} $</h3>
+    {% endfor %}
+    {% endblock %}

@@ -25,7 +25,7 @@ def get_qoute():
 @app1.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'POST':  
-        src = dict(request.form)  
+        src = request.form
         try:
             username, password, email = request.form['username'], request.form['password'], request.form['email']
         except KeyError as e:

@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+{% block leftmenu %}
+<head>
+    <link rel="stylesheet" href="{% static 'gamestore/css/style.css' %}">
+    <title>Game's page</title>
+</head>
+
+<div class="left-menu-name"><a href="{% url 'index' %}">Category</a></div>
+<ul class="left-menu-section">
+    {% for cat in category %}
+    <li><a href="{{ cat.get_absolute_url }}">{{ cat.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+
+{% block sortmenu %}
+<div class="tabs">
+    <div class="tabs-btns">
+
+    </div>
+    {% endblock %}
+
+
+    {% block content %}
+    {% for game in games %}
+    <h1>Game's page</h1>
+    <div class="tab-items">
+        <a class="game-block" href="{{ game.get_absolute_url }}">
+            <div class="game-block-picture">
+                <div class="game-block-image">
+                    <img class="game-block-image" src="{{ game.game_image.url }}">
+                </div>
+            </div>
+            <div class="game-block-name">{{ game.name }}</div>
+            <div class="game-block-desc">{{ game.release_date|date:"Y" }}, {{ game.category }}</div>
+            <div class="game-block-icons"><span class="steam"></span> <span class="windows"></span></div>
+            <div class="game-block-prices">
+                <div class="game-block-price">{{ game.price }}<i class="dollars">$</i></div>
+            </div>
+
+            <div class="game-block-name">{{ game.description }}</div>
+        </a>
+    </div>
+    {% endfor %}
+    {% endblock %}
+
