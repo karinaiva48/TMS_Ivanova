@@ -35,6 +35,11 @@ class Game(ShopInfoMixin):
     class Meta:
         verbose_name = 'Game'
         verbose_name_plural = 'Games'
+        indexes = [models.Index(fields=['name'], name='name_index'),
+                   models.Index(fields=['price'], name='price_index'),
+                   models.Index(fields=['category'], name='category_index')
+                   ]
+
 
     def __str__(self):
         return f'{self.name}'
