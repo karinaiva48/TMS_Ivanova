@@ -1,0 +1,14 @@
+{% load static %}
+{%block title%} Category {% endblock %}
+{% block content %}
+{% for game in games %}
+<div>
+    <p><a href="{{game.slug}}"> {{game.name}} </a></p>
+    <div class="tab-items">
+        <a class="game-block" href="{{ game.get_absolute_url }}">
+        <img width="180" height="240" src="{{ game.game_image.url }}">
+    </div>
+    <p>Price: {{game.price}} $ </p>
+    {% endfor %}
+</div>
+{% endblock %}
